@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        header {
+            background-color: #541111;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Add styles for the round profile picture */
+        .profile-picture {
+            width: 200px; /* Appropriate size for a profile picture */
+            height: 200px; /* Same as width to maintain round shape */
+            position: absolute;
+            top: 20px; /* Position from top of header */
+            left: 20px; /* Position from left edge */
+        }
+
+        nav {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="image.jpg" alt="Profile Picture" class="profile-picture">
+            <h1>Sean Sefika</h1>
+            <p>B.Sc 2nd Year</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I'm a <b>Database</b> expert. 
+                As a Database Administrator (DBA), I am responsible for managing and optimizing databases 
+                to ensure their performance, security, and reliability. 
+                I design and implement database systems, maintain data integrity, 
+                and ensure compliance with security standards while troubleshooting 
+                and resolving any performance issues. 
+                I handle database backups, disaster recovery planning, and assist in data migrations when necessary. 
+                My role also involves collaborating with developers and IT teams to support applications, 
+                automate processes, and monitor database health. 
+                With a focus on continuous improvement, 
+                I ensure that data is efficiently stored, easily accessible, and well-protected against potential risks.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>KG College of Arts and Science, COIMBATORE</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Relational DBMS (RDBMS): 
+                    Knowledge of systems like <b>MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, and SQLite.</b></li>
+                <li>NoSQL DBMS: Understanding of <b>MongoDB, Cassandra, Couchbase, or Redis</b> handling unstructured or semi-structured data.</li>
+                <li>Databases: Familiarity with <b>Cloud-based database systems</b> as <b>RDS, Google Cloud SQL, Azure SQL Database, or Amazon DynamoDB.<b></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">http://127.0.0.1:5500/Portfolio.html</a></li>
+                <!-- Add more project links here -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="Resume.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sean Sefika</p>
+    </footer>
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
